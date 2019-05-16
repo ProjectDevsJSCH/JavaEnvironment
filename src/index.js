@@ -20,7 +20,7 @@ getUsers().then(result => {
     const deleteLinks = global.document.getElementsByClassName('deleteUser');
 
     Array.from(deleteLinks, link => {
-        link.onClick = function(event) {
+        link.onclick = function(event) {
             const element = event.target;
             event.preventDefault();
             deleteUser(element.attributes["data-id"].value);
